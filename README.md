@@ -1,4 +1,4 @@
-# Portfolio Optimizer (Institutional-Grade)
+# Portfolio Optimizer
 
 This Portfolio Optimizer provides robust asset allocation suggestions for multi-asset investments. While standard textbook models often fail in live markets, this engine bridges the gap between theory and production by implementing **Covariance Shrinkage** and **Turnover Constraints**, resulting in highly stable, friction-aware portfolio weights. 
 
