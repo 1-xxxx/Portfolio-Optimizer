@@ -42,3 +42,91 @@ pip install -r requirements.txt
 ```bash
 python version2.py
 ```
+
+## Demo
+As an example, we are creating a permanent portfolio including U.S. Equities (`SPY`), Chinese Equities (`FXI`), Long/Short Treasuries (`TLT`, `SHY`), Precious Metals (`GLD`, `SLV`), Managed Futures (`WTMF`), and Cash Equivalents (`BIL`)
+
+### Max Sharpe Optimization Output
+
+```text
+Optimal Portfolio Weights
+------------------------------
+SPY      : 40.77%
+FXI      :  0.00%
+TLT      :  0.00%
+SHY      :  0.00%
+GLD      : 59.23%
+SLV      :  0.00%
+WTMF     :  0.00%
+BIL      :  0.00%
+Sum      : 100.00%
+
+Optimization Model: Convex Optimization with L1 Turnover Penalty (Assumed Cost: 0.50%)
+Covariance Estimator: Ledoit-Wolf Shrinkage
+
+Portfolio Stats (annualized):
+Expected Return : 14.62%
+Volatility      : 13.01%
+Sharpe (Rf=4.09%) : 0.810
+
+Equal-Weight Baseline:
+Expected Return : 6.90%
+Volatility      : 9.98%
+Sharpe (Rf=4.09%) : 0.282
+```
+
+### Min Variance Optimization Output
+```text
+Optimal Portfolio Weights
+------------------------------
+SPY      : 12.50%
+FXI      :  0.48%
+TLT      : 12.50%
+SHY      : 12.50%
+GLD      : 12.46%
+SLV      :  0.00%
+WTMF     : 12.50%
+BIL      : 37.06%
+Sum      : 100.00%
+
+Optimization Model: Convex Optimization with L1 Turnover Penalty (Assumed Cost: 0.50%)
+Covariance Estimator: Ledoit-Wolf Shrinkage
+
+Portfolio Stats (annualized):
+Expected Return : 4.92%
+Volatility      : 4.92%
+Sharpe (Rf=4.09%) : 0.170
+
+Equal-Weight Baseline:
+Expected Return : 6.90%
+Volatility      : 9.98%
+Sharpe (Rf=4.09%) : 0.282
+```
+### Target Return (10% Annually) Optimization Output
+```text
+Optimal Portfolio Weights
+------------------------------
+SPY      : 27.21%
+FXI      :  0.00%
+TLT      :  0.00%
+SHY      : 12.50%
+GLD      : 35.76%
+SLV      :  0.00%
+WTMF     : 12.03%
+BIL      : 12.50%
+Sum      : 100.00%
+
+Optimization Model: Convex Optimization with L1 Turnover Penalty (Assumed Cost: 0.50%)
+Covariance Estimator: Ledoit-Wolf Shrinkage
+
+Portfolio Stats (annualized):
+Expected Return : 10.00%
+Volatility      : 8.71%
+Sharpe (Rf=4.09%) : 0.679
+
+Equal-Weight Baseline:
+Expected Return : 6.90%
+Volatility      : 9.98%
+Sharpe (Rf=4.09%) : 0.282
+```
+
