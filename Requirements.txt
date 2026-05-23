@@ -6,4 +6,4 @@ matplotlib
 scipy
 PyPortfolioOpt
 cvxpy
-scikit-learn
+requests-cache
